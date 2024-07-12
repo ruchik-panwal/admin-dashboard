@@ -1,0 +1,97 @@
+:root{
+    --background-color: #FFF8F0;
+    --primary-color: #748CAB;
+
+
+}
+
+body{
+    background-color: var(--background-color);
+    font-size: 16px;
+    height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr ;
+}
+
+ul{
+    list-style: none;
+}
+
+p{
+    margin: 0;
+}
+/* D A S H B O A R D */
+
+.dashboard{
+    font-family: "Montserrat";
+    background-color: var(--primary-color);
+    color: white;
+
+    padding: 20px;
+
+    display: grid;
+    grid-row: 1 / 5;
+    grid-template-rows: 1fr 5fr 3fr ;
+}
+
+.dashboard .title{
+    font-size: 2rem;
+    font-weight: 600;
+    align-items: start;
+}
+i.fa-bars{
+    font-size: 1.8rem;
+    margin-right: 10px;
+}
+.title div{
+    display: flex;
+    align-items: center;
+}
+
+.navTab,
+.helpTab{
+    font-size: 1.3rem;
+
+    display: grid;
+    align-content: start;
+    gap: 15px;
+}
+
+.helpTab{
+    align-content: end;
+}
+
+.navTab div,
+.helpTab div{
+    display: flex;
+    align-items: center;
+}
+
+.navTab div i,
+.helpTab div i{
+    margin-right: 10px;
+    width: 30px;
+    text-align: center;
+}
+.header{
+    background-color: aliceblue;
+    grid-column: 2 / 4;
+}
+
+.projectTab{
+    background-color: #548632;
+    grid-area: 2 / 2 / 5 / 2;
+}
+
+.announcementTab{
+    background-color: #852741;
+}
+
+.trendingTab{
+    background-color: #524698;
+}
