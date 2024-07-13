@@ -1,11 +1,12 @@
-:root{
-    --background-color: #FFF8F0;
-    --primary-color: #748CAB;
-
+:root {
+    --background-color: white;
+    --header-color: #F5F5F5;
+    --primary-color: #3A445D;
+    --accent-color: #748CAB;
 
 }
 
-body{
+body {
     background-color: var(--background-color);
     font-size: 16px;
     height: 100vh;
@@ -15,19 +16,24 @@ body{
 
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr ;
+    grid-template-rows: 5rem 1fr 1fr;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-p{
+p {
     margin: 0;
 }
+
+button {
+    border-style: solid;
+}
+
 /* D A S H B O A R D */
 
-.dashboard{
+.dashboard {
     font-family: "Montserrat";
     background-color: var(--primary-color);
     color: white;
@@ -36,25 +42,35 @@ p{
 
     display: grid;
     grid-row: 1 / 5;
-    grid-template-rows: 1fr 5fr 3fr ;
+    grid-template-rows: 1fr 5fr 3fr;
+
+    user-select: none;
 }
 
-.dashboard .title{
+
+.dashboard div :hover{
+    text-shadow: 0 0 1px white;
+    cursor: pointer;
+}
+
+.dashboard .title {
     font-size: 2rem;
     font-weight: 600;
     align-items: start;
 }
-i.fa-bars{
+
+i.fa-bars {
     font-size: 1.8rem;
     margin-right: 10px;
 }
-.title div{
+
+.title div {
     display: flex;
     align-items: center;
 }
 
 .navTab,
-.helpTab{
+.helpTab {
     font-size: 1.3rem;
 
     display: grid;
@@ -62,36 +78,121 @@ i.fa-bars{
     gap: 15px;
 }
 
-.helpTab{
+.helpTab {
     align-content: end;
 }
 
 .navTab div,
-.helpTab div{
+.helpTab div {
     display: flex;
     align-items: center;
 }
 
 .navTab div i,
-.helpTab div i{
+.helpTab div i {
     margin-right: 10px;
     width: 30px;
     text-align: center;
 }
-.header{
-    background-color: aliceblue;
+
+/* H E A D E R */
+
+.header {
+    background-color: var(--header-color);
     grid-column: 2 / 4;
+
+    padding: 10px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 2fr 3fr 1fr;
 }
 
-.projectTab{
+.logo{
+    font-family: "Playwrite PE";
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    
+}
+.leftHeader{
+    display: flex;
+    justify-content: center;
+}
+
+.rightHeader{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.leftHeader button{
+    margin-right: 10px;
+    border-radius: 5px;
+    width: 6rem;
+    height: 3rem;
+}
+
+.rightHeader button{
+    margin-left: 10px;
+}
+
+.newButton {
+    background-color: #06d961;
+    color: white;
+    font-size: large;
+    border: none;
+    
+}
+
+.uploadButton,
+.shareButton {
+    border: none;
+    background-color: white;
+}
+
+form {
+    height: 3rem;
+    width: 30vw;
+    background-color: white;
+    border-radius: 1.5rem;
+
+    justify-self: center;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding-left: 1.5rem;
+}
+
+#search {
+    flex: 1;
+    border: none;
+}
+
+button[type="submit"] {
+    width: 3rem;
+    border-radius: 1.5rem;
+    border: none;
+}
+
+.headerButton {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 1.5rem;
+    border: none;
+
+
+    background-color: white;
+}
+
+.projectTab {
     background-color: #548632;
     grid-area: 2 / 2 / 5 / 2;
 }
 
-.announcementTab{
+.announcementTab {
     background-color: #852741;
 }
 
-.trendingTab{
+.trendingTab {
     background-color: #524698;
 }
