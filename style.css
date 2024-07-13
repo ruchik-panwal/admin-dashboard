@@ -3,6 +3,7 @@
     --header-color: #F5F5F5;
     --primary-color: #3A445D;
     --accent-color: #748CAB;
+    --dashboard-toggle: 1fr; 
 
 }
 
@@ -15,8 +16,9 @@ body {
     padding: 0;
 
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-columns: var(--dashboard-toggle) 4fr 1fr;
     grid-template-rows: 5rem 1fr 1fr;
+
 }
 
 ul {
@@ -38,6 +40,7 @@ button {
     background-color: var(--primary-color);
     color: white;
 
+
     padding: 20px;
 
     display: grid;
@@ -49,7 +52,7 @@ button {
 
 
 .dashboard div :hover{
-    text-shadow: 0 0 1px white;
+    text-shadow: 0 0 1.5px white;
     cursor: pointer;
 }
 
@@ -62,6 +65,7 @@ button {
 i.fa-bars {
     font-size: 1.8rem;
     margin-right: 10px;
+    margin-left: 2px;
 }
 
 .title div {
@@ -195,4 +199,8 @@ button[type="submit"] {
 
 .trendingTab {
     background-color: #524698;
+}
+
+div~p {
+    color: #852741;
 }
