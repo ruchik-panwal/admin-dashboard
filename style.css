@@ -1,16 +1,18 @@
 :root {
-    --background-color: white;
+    --background-color: hsl(0, 0%, 99%);
     --header-color: #F5F5F5;
     --primary-color: #3A445D;
     --accent-color: #748CAB;
-    --dashboard-toggle: 1fr; 
+    --dashboard-toggle: 1fr;
+    --text-color: #1d2333;
+    --card-color: white;
 
 }
 
 body {
     background-color: var(--background-color);
     font-size: 16px;
-    height: 100vh;
+    height: 100%;
 
     margin: 0;
     padding: 0;
@@ -39,19 +41,19 @@ button {
     font-family: "Montserrat";
     background-color: var(--primary-color);
     color: white;
-
+    height:100%;
 
     padding: 20px;
 
     display: grid;
     grid-row: 1 / 5;
-    grid-template-rows: 1fr 5fr 3fr;
-
+    grid-template-rows: 10vh 30vh 25vh ;
     user-select: none;
+    
 }
 
 
-.dashboard div :hover{
+.dashboard div :hover {
     text-shadow: 0 0 1.5px white;
     cursor: pointer;
 }
@@ -82,9 +84,6 @@ i.fa-bars {
     gap: 15px;
 }
 
-.helpTab {
-    align-content: end;
-}
 
 .navTab div,
 .helpTab div {
@@ -108,34 +107,32 @@ i.fa-bars {
     padding: 10px;
     display: grid;
     align-items: center;
-    grid-template-columns: 1fr 2fr 3fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr ;
+    
 }
 
-.logo{
+.logo {
     font-family: "Playwrite PE";
     font-size: 2rem;
     font-weight: 600;
     color: var(--primary-color);
-    
-}
-.leftHeader{
-    display: flex;
-    justify-content: center;
+
 }
 
-.rightHeader{
+
+.rightHeader {
     display: flex;
     justify-content: flex-end;
 }
 
-.leftHeader button{
+.featureButton button {
     margin-right: 10px;
     border-radius: 5px;
     width: 6rem;
     height: 3rem;
 }
 
-.rightHeader button{
+.rightHeader button {
     margin-left: 10px;
 }
 
@@ -144,13 +141,13 @@ i.fa-bars {
     color: white;
     font-size: large;
     border: none;
-    
 }
 
 .uploadButton,
 .shareButton {
     border: none;
     background-color: white;
+    box-shadow: 0 0 2px var(--text-color);
 }
 
 form {
@@ -188,18 +185,149 @@ button[type="submit"] {
     background-color: white;
 }
 
+
+/* P R O J E C T */
+
 .projectTab {
-    background-color: #548632;
+    background-color: var(--background-color);
     grid-area: 2 / 2 / 5 / 2;
+
+    padding: 20px;
+    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-rows: 6rem 1fr;
+    justify-content: center;
 }
 
+.projectTitle,
+.announcementTitle {
+    font-family: "Montserrat";
+    font-size: 2rem;
+    align-self: center;
+    color: var(--text-color);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.projectTitle p{
+    align-self: center;
+}
+
+.featureButton {
+    display: flex;
+    justify-content: center;
+}
+
+.cardHolder{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    /* grid-template-rows: repeat(auto-fit, 300px); */
+    gap: 30px;
+
+    justify-items: center;
+    align-items: center;
+}
+
+.card{
+    border-style: solid;
+    border-color: var(--text-color);
+    background-color: var(--card-color);
+    border-width: 1px;
+
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 2rem;
+
+    box-sizing: border-box;
+    border-radius: 2%;
+    width: 350px;
+    padding: 5%;
+
+
+    /* box-shadow: 0 0 2px black; */
+
+    display: flex;
+    flex-direction: column;
+}
+
+.projectName{
+    margin-bottom: 5px;
+    font-size: 1.7rem;
+    color: var(--text-color);
+}
+
+
+.card img{
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+}
+
+.projectStatus{
+    background-color: rgb(75, 187, 240);
+    width: fit-content;
+    font-size: 0.7rem;
+    border-style: none;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+}
+
+.accessButtons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.accessButtons button{
+    height: 3rem;
+    padding: 10px;
+    margin: 2px;
+    font-size: 1rem;
+    border-radius: 3px;
+}
+
+.livePreview{
+    border-style: none;
+    background-color: #06d961;
+    color: white;
+    flex: 2;
+}
+
+.github{
+    flex: 2;
+    color: var(--text-color);
+    border-color: var(--text-color);
+    border-width: 1px;
+    background-color: white;
+}
+.share{
+    border-width: 1px;
+    background-color: white;
+}
+
+
+/* A N N O U N C E M E N T */
+
 .announcementTab {
-    background-color: #852741;
+    background-color: var(--background-color);
+
+    display: grid;
+    grid-template-rows: 3rem 1fr;
+}
+
+.announcementTitle{
+    font-size: 1.5rem;
+    justify-content: center;
 }
 
 .trendingTab {
     background-color: #524698;
 }
+
 
 div~p {
     color: #852741;

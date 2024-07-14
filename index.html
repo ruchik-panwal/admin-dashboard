@@ -25,6 +25,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+PE:wght@100..400&display=swap" rel="stylesheet">
 
+    <!-- projectName Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
     <!-- I C O N S -->
     <script src="https://kit.fontawesome.com/befdb26257.js" crossorigin="anonymous"></script>
     <link rel="stylesheet"
@@ -66,8 +71,12 @@
             <div><i class="fa-solid fa-gear"></i>
                 <p class="dash"> Settings </p>
             </div>
-            <div><i class="fa-solid fa-circle-info"></i> <p class="dash">Support</p></div>
-            <div><i class="fa-solid fa-shield-halved"></i> <p class="dash">Privacy</p></div>
+            <div><i class="fa-solid fa-circle-info"></i>
+                <p class="dash">Support</p>
+            </div>
+            <div><i class="fa-solid fa-shield-halved"></i>
+                <p class="dash">Privacy</p>
+            </div>
 
         </div>
     </div>
@@ -75,13 +84,7 @@
     <div class="header">
 
         <div class="logo">CrowJect</div>
-        <div class="leftHeader">
-            <button class="newButton">NEW</button>
-            <button class="uploadButton"><span class="material-symbols-outlined">
-                    upload
-                </span></button>
-            <button class="shareButton"><i class="fa-solid fa-share"></i></button>
-        </div>
+
 
         <form action="">
             <input type="text" id="search">
@@ -96,8 +99,61 @@
 
     </div>
 
-    <div class="projectTab"></div>
-    <div class="announcementTab"></div>
+    <div class="projectTab">
+        <div class="projectTitle" id="siteTitle">
+            <p>PROJECTS</p>
+            <div class="featureButton">
+                <button class="newButton">NEW</button>
+                <button class="uploadButton"><span class="material-symbols-outlined">
+                        upload
+                    </span></button>
+                <button class="shareButton"><i class="fa-solid fa-share"></i></button>
+            </div>
+        </div>
+        <div class="cardHolder">
+            <div class="card">
+                <img src="images/testPic.jpg" alt="testImg">
+                <div class="projectName">Rock Paper Scissors</div>
+                <button class="projectStatus">Completed</button>
+                <div class="accessButtons">
+                    <button class="livePreview">Live Preview</button>
+                    <button class="github">Github</button>
+                    <button class="share"><i class="fa-solid fa-share"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/testPic.jpg" alt="testImg">
+                <div class="projectName">Rock Paper Scissors</div>
+                <button class="projectStatus">Completed</button>
+                <div class="accessButtons">
+                    <button class="livePreview">Live Preview</button>
+                    <button class="github">Github</button>
+                    <button class="share"><i class="fa-solid fa-share"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="announcementTab">
+
+        <div class="announcementTitle" id="siteTitle">ANNOUNCEMENT</div>
+        <div class="annCard">
+            <div class="list">
+                <div class="listTitle"></div>
+                <div class="listDescription"></div>
+            </div>
+            <div class="list">
+                <div class="listTitle">Why this site ?
+                </div>
+                <div class="listDescription">All the Projects which are created by Me (Only from Odin Project) will be shown in this site.</div>
+            </div>
+            <div class="list">
+                <div class="listTitle">More about this site</div>
+                <div class="listDescription">This site is made as a project given by The Odin Project. Made on 15th July 2024</div>
+            </div>
+        </div>
+
+    </div>
     <div class="trendingTab"></div>
 
 </body>
