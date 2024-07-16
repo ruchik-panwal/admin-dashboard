@@ -6,7 +6,6 @@
     --dashboard-toggle: 1fr;
     --text-color: #1d2333;
     --card-color: white;
-
 }
 
 body {
@@ -37,11 +36,15 @@ button {
 
 input {
     background-color: transparent;
-    
+
 }
 
-input:active{
+input:active {
     border-style: none;
+}
+
+a{
+    text-decoration: none;
 }
 
 
@@ -63,6 +66,10 @@ input:active{
 
 }
 
+
+#off{
+    opacity: 0.6;
+}
 
 .dashboard div :hover {
     text-shadow: 0 0 1.5px white;
@@ -152,7 +159,7 @@ i.fa-bars {
     color: white;
     font-size: large;
     border: none;
-    
+
 }
 
 .uploadButton,
@@ -197,12 +204,12 @@ button[type="submit"] {
     background-color: white;
 }
 
-.headerButton:hover{
+.headerButton:hover {
     border: solid;
     border-width: 1px;
 }
 
-.headerButton i{
+.headerButton i {
     font-size: 1.3rem;
 }
 
@@ -239,7 +246,7 @@ button[type="submit"] {
 .featureButton {
     display: flex;
     justify-content: center;
-    
+
 }
 
 .cardHolder {
@@ -283,7 +290,7 @@ button[type="submit"] {
     height: 300px;
     width: 100%;
     object-fit: cover;
-    
+
 }
 
 .projectStatus {
@@ -316,15 +323,39 @@ button[type="submit"] {
     border-style: none;
     background-color: #06d961;
     color: white;
-    flex: 2;
+    width: 100%;
 }
 
 .github {
-    flex: 2;
     color: var(--text-color);
     border-color: var(--text-color);
     border-width: 1px;
     background-color: white;
+    width: 100%;
+}
+
+.accessButtons a {
+    flex: 2;
+    margin: 3px;
+}
+
+button:hover {
+    cursor: pointer;
+
+}
+
+button.livePreview:hover {
+    background-color: white;
+    box-shadow: 0 0 5px #06d961;
+    color: #06d961;
+}
+
+button.github:hover {
+    background-color: hsl(0, 0%, 95%);
+}
+
+.share:hover {
+    background-color: hsl(0, 0%, 95%);
 }
 
 .share {
@@ -336,7 +367,7 @@ button[type="submit"] {
 /* A N N O U N C E M E N T */
 
 .announcementTab,
-.trendingTab{
+.trendingTab {
     background-color: var(--background-color);
 
     font-family: "Inter";
@@ -381,21 +412,23 @@ button[type="submit"] {
 
 /*  T R E N D I N  G   */
 
-.user{
+.user {
     display: grid;
     grid-template-columns: 70px 1fr;
-    
+
     align-items: center;
     justify-items: center;
 }
-.userProfile{
+
+.userProfile {
     height: 50px;
     width: 50px;
     border-radius: 25px;
     background-color: black;
     grid-row: span 2;
 }
-.userName{
+
+.userName {
     color: var(--text-color);
     font-weight: 600;
     font-size: 1.2rem;
@@ -404,13 +437,13 @@ button[type="submit"] {
 
     align-content: center;
 }
-.userDescription{
+
+.userDescription {
     width: 100%;
     color: var(--text-color);
-    
 }
-.userProfile img{
-}
+
+.userProfile img {}
 
 div~p {
     color: #852741;
