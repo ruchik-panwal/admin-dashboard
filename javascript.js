@@ -16,3 +16,9 @@ dashboardToggle.addEventListener("click", () => {
 function dashToggle(temp) {
     return temp === "1fr" ? "65px" : "1fr";
 }
+
+const themeTogg = document.querySelector("#theme");
+
+themeTogg.addEventListener("click" , () => {
+    root.className = root.className === "light" ? "dark" : "light" ;
+});
